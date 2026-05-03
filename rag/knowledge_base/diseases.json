@@ -1,0 +1,162 @@
+[
+  {
+    "id": "overwatering_yellow_leaves",
+    "symptom": "Yellow leaves, especially lower leaves, with soggy or wet soil",
+    "likely_cause": "Overwatering",
+    "treatment": "Stop watering immediately. Allow soil to dry completely. Check for root rot by inspecting roots. Repot in fresh dry soil if roots are brown and mushy. Ensure pot has drainage holes.",
+    "urgency": "medium",
+    "affected_plants": ["most houseplants", "succulents", "cacti"]
+  },
+  {
+    "id": "root_rot",
+    "symptom": "Wilting despite moist soil, dark mushy stems at base, yellow drooping leaves, foul smell from pot",
+    "likely_cause": "Root rot caused by Pythium or Phytophthora fungi from overwatering",
+    "treatment": "Remove from pot, trim all brown mushy roots, dust with cinnamon or sulfur, repot in fresh well-draining soil, reduce watering significantly going forward.",
+    "urgency": "high",
+    "affected_plants": ["most houseplants", "fiddle leaf fig", "pothos", "peace lily"]
+  },
+  {
+    "id": "underwatering_wilting",
+    "symptom": "Wilting, drooping, dry crispy leaf tips and edges, bone-dry soil, lightweight pot",
+    "likely_cause": "Underwatering / drought stress",
+    "treatment": "Water thoroughly until water drains from holes. For severely dehydrated plants, bottom-water in a tray for 30-60 minutes. Establish a more consistent watering schedule.",
+    "urgency": "low",
+    "affected_plants": ["all plants"]
+  },
+  {
+    "id": "spider_mites",
+    "symptom": "Fine webbing between leaves and stems, stippled bronze or silvery leaves, dusty appearance, tiny moving dots",
+    "likely_cause": "Spider mite infestation; thrives in hot dry conditions",
+    "treatment": "Isolate plant immediately. Rinse thoroughly under shower or hose. Apply neem oil or insecticidal soap spray, covering undersides of leaves. Increase humidity. Repeat weekly for 3-4 weeks.",
+    "urgency": "medium",
+    "affected_plants": ["most plants", "especially ivy", "orchids", "roses", "herbs"]
+  },
+  {
+    "id": "mealybugs",
+    "symptom": "White cottony fuzzy clusters in leaf axils, stems, and undersides of leaves; sticky honeydew residue",
+    "likely_cause": "Mealybug infestation",
+    "treatment": "Isolate plant. Dab all visible mealybugs with 70% isopropyl alcohol on cotton swab. Spray with neem oil. Check for new colonies weekly. Severe infestations may require discarding the plant.",
+    "urgency": "medium",
+    "affected_plants": ["succulents", "cacti", "orchids", "citrus", "most houseplants"]
+  },
+  {
+    "id": "fungus_gnats",
+    "symptom": "Small dark flies hovering around soil, larvae in topsoil, slow growth and wilting from root damage",
+    "likely_cause": "Fungus gnats; larvae feed on roots in moist soil",
+    "treatment": "Allow soil to dry more between waterings (top 2 inches dry). Use yellow sticky traps. Drench soil with 1:4 hydrogen peroxide to water solution. Apply Bacillus thuringiensis israelensis (Bti) for severe cases.",
+    "urgency": "low",
+    "affected_plants": ["most houseplants", "especially herbs and seedlings"]
+  },
+  {
+    "id": "scale_insects",
+    "symptom": "Brown oval shell-like bumps firmly attached to stems and leaf undersides; sticky honeydew; sooty mold",
+    "likely_cause": "Scale insect infestation",
+    "treatment": "Scrape off visible scale with toothpick or soft toothbrush. Wipe with 70% isopropyl alcohol. Apply horticultural oil or neem oil. Treat weekly for 4-6 weeks as eggs hatch.",
+    "urgency": "medium",
+    "affected_plants": ["citrus", "ficus", "orchids", "most woody plants"]
+  },
+  {
+    "id": "powdery_mildew",
+    "symptom": "White powdery coating on leaves and stems; leaves may yellow and distort; typically starts on upper leaf surface",
+    "likely_cause": "Powdery mildew fungus; favored by poor air circulation and moderate humidity",
+    "treatment": "Remove affected leaves. Improve air circulation. Spray with diluted baking soda solution (1 tsp per quart water) or neem oil. Avoid overhead watering. Do not mist affected plants.",
+    "urgency": "medium",
+    "affected_plants": ["roses", "herbs", "squash", "cucumbers", "begonias"]
+  },
+  {
+    "id": "leaf_spot_fungal",
+    "symptom": "Brown or black circular spots on leaves, often with yellow halo; spots may merge as disease spreads",
+    "likely_cause": "Fungal leaf spot (Cercospora, Septoria, or Alternaria spp.)",
+    "treatment": "Remove all affected leaves. Avoid wetting foliage when watering. Improve airflow. Apply copper-based fungicide or neem oil. Avoid overcrowding plants.",
+    "urgency": "low",
+    "affected_plants": ["most plants", "especially in high humidity or when leaves stay wet"]
+  },
+  {
+    "id": "sunburn_scorch",
+    "symptom": "Bleached, white, or tan patches on leaves (usually upper surface); crispy texture in affected areas; sharp boundary between healthy and damaged tissue",
+    "likely_cause": "Sunscorch from direct intense sunlight, especially on plants not adapted to full sun",
+    "treatment": "Move plant away from direct harsh sunlight. Damaged leaves will not recover but the plant will produce healthy new growth. Transition plants gradually to higher light levels.",
+    "urgency": "low",
+    "affected_plants": ["tropical foliage plants", "peace lily", "pothos", "calathea"]
+  },
+  {
+    "id": "nutrient_deficiency_nitrogen",
+    "symptom": "Pale yellow-green leaves uniformly across plant, slow growth, small new leaves, overall washed-out appearance",
+    "likely_cause": "Nitrogen deficiency; most common nutrient deficiency in houseplants",
+    "treatment": "Apply balanced liquid fertilizer (high nitrogen like 10-5-5 or 20-20-20) diluted to half strength. Fertilize monthly during growing season. Avoid fertilizing in winter.",
+    "urgency": "low",
+    "affected_plants": ["all actively growing plants"]
+  },
+  {
+    "id": "chlorosis_iron_deficiency",
+    "symptom": "Yellowing between leaf veins while veins remain green (interveinal chlorosis), especially on young leaves",
+    "likely_cause": "Iron deficiency (often caused by high pH soil preventing iron uptake)",
+    "treatment": "Apply chelated iron fertilizer. Lower soil pH with acidifying fertilizer or add coffee grounds to soil. Flush soil to remove mineral buildup.",
+    "urgency": "low",
+    "affected_plants": ["gardenias", "azaleas", "citrus", "most acid-loving plants"]
+  },
+  {
+    "id": "fluoride_toxicity",
+    "symptom": "Brown leaf tips and edges on otherwise healthy plant; usually progresses inward; common in striped or narrow-leaved plants",
+    "likely_cause": "Fluoride or salt toxicity from tap water or overfertilizing",
+    "treatment": "Switch to filtered, distilled, or rainwater. Flush soil thoroughly with distilled water to leach accumulated salts. Remove badly affected leaves.",
+    "urgency": "low",
+    "affected_plants": ["spider plants", "dracaenas", "peace lilies", "bromeliads", "palms"]
+  },
+  {
+    "id": "aphids",
+    "symptom": "Clusters of small soft-bodied green, black, white, or pink insects on new growth and leaf undersides; sticky honeydew; distorted curled new leaves",
+    "likely_cause": "Aphid infestation",
+    "treatment": "Blast with strong water spray. Apply insecticidal soap or neem oil, coating all surfaces especially undersides. Repeat weekly. Introduce ladybugs outdoors.",
+    "urgency": "low",
+    "affected_plants": ["roses", "herbs", "most soft-stemmed plants", "vegetables"]
+  },
+  {
+    "id": "thrips",
+    "symptom": "Silver or bronze streaks on leaf surfaces, distorted or scarred new growth, tiny fast-moving insects visible with magnification, black fecal dots",
+    "likely_cause": "Thrips infestation",
+    "treatment": "Remove heavily infested leaves. Spray with neem oil, spinosad, or insecticidal soap. Use sticky traps. Isolate from other plants. Repeat every 5-7 days.",
+    "urgency": "medium",
+    "affected_plants": ["orchids", "roses", "most flowering plants", "vegetables"]
+  },
+  {
+    "id": "etiolation",
+    "symptom": "Long stretched spindly stems reaching toward light, wide spacing between leaves, pale color, loss of compact form",
+    "likely_cause": "Insufficient light / etiolation",
+    "treatment": "Move plant to brighter location. Prune back leggy stems to encourage bushier growth. For succulents and cacti, direct sun is usually needed. Changes will be visible in new growth.",
+    "urgency": "low",
+    "affected_plants": ["succulents", "echeveria", "cacti", "most light-loving plants"]
+  },
+  {
+    "id": "edema",
+    "symptom": "Corky, water-soaked, or blistered bumps on leaf undersides or stems; bumps may turn brown or tan",
+    "likely_cause": "Edema (oedema) — plant takes up water faster than it can transpire; common in overwatered or humid conditions",
+    "treatment": "Reduce watering frequency. Improve air circulation. Move to brighter location to increase transpiration. Affected areas won't heal but new growth will be normal.",
+    "urgency": "low",
+    "affected_plants": ["succulents", "jade plants", "geraniums", "rubber plants"]
+  },
+  {
+    "id": "cold_damage",
+    "symptom": "Darkened water-soaked areas on leaves, limp or mushy tissue, blackening of leaves that doesn't recover, sudden collapse",
+    "likely_cause": "Frost or cold damage; chilling injury from temperatures too low for tropical plants",
+    "treatment": "Move plant to warmer location immediately. Remove dead or damaged foliage. Do not overwater cold-stressed plants — roots uptake water poorly. Recovery depends on severity.",
+    "urgency": "high",
+    "affected_plants": ["most tropical plants", "orchids", "basil", "tomatoes", "citrus"]
+  },
+  {
+    "id": "botrytis_gray_mold",
+    "symptom": "Gray fuzzy mold on leaves, stems, or flowers; affects dying or damaged tissue first; thrives in cool wet conditions",
+    "likely_cause": "Botrytis cinerea (gray mold) fungus",
+    "treatment": "Remove all affected plant parts. Improve air circulation. Reduce humidity. Avoid overhead watering. Apply copper-based fungicide. Discard severely affected plants.",
+    "urgency": "medium",
+    "affected_plants": ["begonias", "orchids", "strawberries", "most plants in cool humid conditions"]
+  },
+  {
+    "id": "bacterial_rot",
+    "symptom": "Water-soaked dark lesions on stems or leaves, foul odor, slimy oozing tissue, rapid plant collapse",
+    "likely_cause": "Bacterial soft rot (Erwinia or Pseudomonas spp.); commonly enters through wounds",
+    "treatment": "Cut away all affected tissue with sterilized blade. Apply hydrogen peroxide to cut surfaces. Repot in fresh sterile soil. Reduce watering. Severe cases: discard plant to prevent spread.",
+    "urgency": "critical",
+    "affected_plants": ["cacti", "succulents", "orchids", "most plants with soft tissue"]
+  }
+]
