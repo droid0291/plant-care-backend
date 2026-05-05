@@ -21,9 +21,11 @@ def register_exception_handlers(app: FastAPI) -> None:
 
     @app.exception_handler(openai.APIError)
     async def openai_api_error_handler(request: Request, exc: openai.APIError):
+        import logging
+        logging.getLogger(__name__).error(f"OpenAI API error: {exc}")
         return JSONResponse(
             status_code=502,
-            content={"error": "llm_unavailable", "detail": "OpenAI API error. Please try again."},
+            content={"error": "llm_unavailable", "detail": str(exc)},
         )
 
     @app.exception_handler(openai.RateLimitError)
@@ -35,7 +37,9 @@ def register_exception_handlers(app: FastAPI) -> None:
 
     @app.exception_handler(Exception)
     async def generic_handler(request: Request, exc: Exception):
+        import logging
+        logging.getLogger(__name__).error(f"Unhandled error: {exc}", exc_info=True)
         return JSONResponse(
             status_code=500,
-            content={"error": "internal_error", "detail": "An unexpected error occurred."},
+            content={"error": "internal_error", "detail": str(exc)},
         )

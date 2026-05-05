@@ -239,5 +239,7 @@ def analyze_plant(
     )
 
     result: PlantAnalysisResponse = response.choices[0].message.parsed
+    if result is None:
+        raise ValueError("Could not identify a plant in the provided image.")
     result.rag_sources_used = rag_sources
     return result

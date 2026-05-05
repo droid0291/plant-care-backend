@@ -46,13 +46,16 @@ async def analyze_plant(
 
     # Step 3: Full structured analysis with GPT-4o vision
     logger.info("Running full plant analysis with GPT-4o...")
-    result = llm_service.analyze_plant(
-        image_base64=processed_image,
-        rag_context=rag_chunks,
-        rag_sources=rag_sources,
-        user_note=request.user_note,
-        openai_client=openai_client
-    )
+    try:
+        result = llm_service.analyze_plant(
+            image_base64=processed_image,
+            rag_context=rag_chunks,
+            rag_sources=rag_sources,
+            user_note=request.user_note,
+            openai_client=openai_client
+        )
+    except ValueError as e:
+        raise ImageValidationError(str(e))
     logger.info(f"Analysis complete: {result.identification.common_name} ({result.identification.confidence_score:.0%} confidence)")
 
     # Step 4: Cache result

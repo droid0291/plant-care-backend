@@ -1,5 +1,8 @@
 from pydantic_settings import BaseSettings
-from functools import lru_cache
+from dotenv import load_dotenv
+from pathlib import Path
+
+load_dotenv(Path(__file__).parent / ".env", override=True)
 
 
 class Settings(BaseSettings):
@@ -16,6 +19,5 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 
-@lru_cache
 def get_settings() -> Settings:
     return Settings()
