@@ -4,7 +4,7 @@ FastAPI backend for the PlantCare AI Android app. Accepts a base64-encoded plant
 
 ---
 
-## **[▶ Watch the App Demo Video](https://drive.google.com/file/d/1BgEJjRJPbSER9G0_8NIhOzqk-VXYP0CN/view?usp=drive_link)**
+## **[▶ Watch the App Demo Video](https://drive.google.com/file/d/1EjYOpUo6jgIlb6ii8_AJZaR9JcogyNJj/view?usp=drive_link)**
 
 ---
 
