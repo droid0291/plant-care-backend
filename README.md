@@ -4,6 +4,10 @@ FastAPI backend for the PlantCare AI Android app. Accepts a base64-encoded plant
 
 ---
 
+## **[▶ Watch the App Demo Video](https://drive.google.com/file/d/1EjYOpUo6jgIlb6ii8_AJZaR9JcogyNJj/view?usp=drive_link)**
+
+---
+
 ## How It Works
 
 1. The Android app sends a plant image (base64) to `POST /api/v1/analyze`
