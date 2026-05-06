@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Optional
 from openai import OpenAI
-from models.plant_response import PlantAnalysisResponse
+from models.plant_response import PlantAnalysisResponse, PlantHealthOnly
 from config import get_settings
 
 SYSTEM_PROMPT = """You are PlantCare AI, an expert botanist and plant health specialist with decades of experience.
@@ -185,6 +185,70 @@ def identify_plant_name(image_base64: str, openai_client: OpenAI) -> str:
         max_tokens=20
     )
     return response.choices[0].message.content.strip()
+
+
+HEALTH_SYSTEM_PROMPT = """You are PlantCare AI, an expert botanist and plant health specialist.
+
+The plant species has already been identified — do NOT re-identify it. Your only tasks are:
+1. Assess the plant's visible health from the image
+2. Provide a confidence score for the identification (0.0-1.0)
+3. Share 2-4 genuinely interesting fun facts about this species
+
+Focus entirely on what you can SEE in the image:
+- Leaf color, texture, spots, yellowing, browning, or curling
+- Signs of pests, disease, overwatering, or underwatering
+- Overall vigor and growth condition
+
+Urgency levels:
+- low: plant appears healthy, minor improvements only
+- medium: noticeable issues, attention needed within 1-2 weeks
+- high: significant problems, act within a few days
+- critical: emergency care needed immediately
+
+If the user provided an observation note, incorporate it into your health assessment.
+"""
+
+
+def assess_health_only(
+    image_base64: str,
+    plant_name: str,
+    user_note: Optional[str],
+    openai_client: OpenAI,
+) -> PlantHealthOnly:
+    """Health-only GPT-4o call used when the plant is found in the KB. ~60% fewer tokens than full analysis."""
+    settings = get_settings()
+    note_block = f"\nUser observation: {user_note}" if user_note else ""
+    text = (
+        f"The plant in this image is a {plant_name}. "
+        f"Assess its visible health and provide fun facts.{note_block}"
+    )
+
+    response = openai_client.beta.chat.completions.parse(
+        model=settings.openai_model,
+        messages=[
+            {"role": "system", "content": HEALTH_SYSTEM_PROMPT},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": text},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{image_base64}",
+                            "detail": "high",
+                        },
+                    },
+                ],
+            },
+        ],
+        response_format=PlantHealthOnly,
+        max_tokens=600,
+    )
+
+    result: PlantHealthOnly = response.choices[0].message.parsed
+    if result is None:
+        raise ValueError("Could not assess plant health from the provided image.")
+    return result
 
 
 def build_user_message(image_base64: str, rag_context: list[str], user_note: Optional[str]) -> dict:

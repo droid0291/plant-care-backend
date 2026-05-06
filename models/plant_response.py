@@ -58,6 +58,12 @@ class PlantAnalysisResponse(BaseModel):
     )
 
 
+class PlantHealthOnly(BaseModel):
+    confidence_score: float = Field(ge=0.0, le=1.0, description="Confidence in plant identification, 0.0 to 1.0")
+    health: HealthAssessment
+    fun_facts: list[str] = Field(description="2-4 interesting facts about this species")
+
+
 class AnalyzeRequest(BaseModel):
     image_base64: str = Field(description="Base64-encoded JPEG image")
     user_note: Optional[str] = Field(
